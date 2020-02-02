@@ -1,8 +1,8 @@
-﻿using OpenQA.Selenium.Support.PageObjects;
+﻿using SeleniumExtras.PageObjects;
 
 namespace UIAutomationTestFramework.Pages
 {
-    public class BasePage
+    public class Pages
     {
         private static T GetPage<T>() where T : new()
         {
@@ -11,9 +11,9 @@ namespace UIAutomationTestFramework.Pages
             return page;
         }
 
-        public static HomePage HomePage
+        public static SignInPage SignInPage
         {
-            get { return GetPage<HomePage>(); }
+            get { return GetPage<SignInPage>(); }
         }
     }
 

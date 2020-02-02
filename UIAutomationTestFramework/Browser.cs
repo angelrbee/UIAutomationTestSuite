@@ -5,12 +5,13 @@ namespace UIAutomationTestFramework
 {
     public static class Browser
     {
-        private static string baseUrl = "https://book.cebupacificair.com/";
-        private static IWebDriver webDriver = new ChromeDriver();
+        private static string baseUrl = "https://www.facebook.com/";
+        public static IWebDriver webDriver = new ChromeDriver();
 
         public static void Initialize()
         {
             Goto("");
+
         }
 
         public static string Title
@@ -25,7 +26,8 @@ namespace UIAutomationTestFramework
 
         public static void Goto(string url)
         {
-            webDriver.Url = baseUrl + url;
+            webDriver.Url = baseUrl;
+            webDriver.Manage().Window.Maximize();
         }
 
         public static void Close()
